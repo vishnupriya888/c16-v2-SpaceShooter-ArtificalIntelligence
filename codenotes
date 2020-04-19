@@ -11,10 +11,14 @@ var bullet;
 var enemiesGroup = createGroup();
 var bulletGroup = createGroup();
 
-
+var score = 0;
 function draw() {
   background("white");
+  drawSprites();
   createEdgeSprites();
+  fill("white");
+  textSize(25);
+  text("SCORE : "+score,260,30);
 
   space.velocityY = 2;
  // player.x= World.mouseX;
@@ -38,12 +42,9 @@ function draw() {
     if(bulletGroup.isTouching(enemiesGroup)){
      
       enemiesGroup.get(i).destroy();
-      
+      score++;
     }
   }
-  
-  
-  drawSprites();
   
 }
 function Bullets(){

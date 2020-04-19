@@ -1,4 +1,3 @@
-``` js
 var space = createSprite(200,200,800,800);
 space.setAnimation("space1");
 
